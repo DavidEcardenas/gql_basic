@@ -1,13 +1,15 @@
+import { readFileSync } from "fs";
+import { join } from "path";
 import { GraphQLSchema } from "graphql";
 import { makeExecutableSchema } from "@graphql-tools/schema";
-import gql from "graphql-tag";
+import resolvers from "./resolvers/resolverMap";
 
-const typeDefs = gql`
-    type Query {
-        hello: String
-    }
-`;
+const rootSchema = readFileSync(
+    join(__dirname, "./schemas/schema.graphql"),
+    "utf8"
+);
 
 export const schema: GraphQLSchema = makeExecutableSchema({
-    typeDefs
+    typeDefs: [rootSchema],
+    resolvers
 });
