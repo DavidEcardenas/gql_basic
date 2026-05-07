@@ -5,7 +5,6 @@ import { schema } from "./graphql";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 
 const app: Application = express();
-
 app.use(cors());
 
 const server = new ApolloServer({
