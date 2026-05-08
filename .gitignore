@@ -1,2 +1,26 @@
-node_modules
-dist
+# Dependencies
+node_modules/
+
+# Build
+dist/
+build/
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Yarn
+.yarn-integrity
+
+# TypeScript
+*.tsbuildinfo
